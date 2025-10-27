@@ -713,6 +713,9 @@ SHAPES
     }.shape {
         visibility: hidden;
     }
+    .nav__link {
+        z-index: 100;
+    }
 }
 
 

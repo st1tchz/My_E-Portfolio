@@ -693,6 +693,9 @@ SHAPES
     .title {
         font-size: 80px;
     }
+    .header__content {
+        margin-top: 100px;
+    }
     .header__para {
         font-size: 20px;
     }
@@ -707,6 +710,8 @@ SHAPES
     }
     .modal__half {
         width: 100%;
+    }.shape {
+        visibility: hidden;
     }
 }
 
@@ -738,4 +743,5 @@ SHAPES
     .modal__half {
         padding: 40px;
     }
+    
 }

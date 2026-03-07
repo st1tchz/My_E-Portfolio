@@ -748,3 +748,24 @@ SHAPES
     }
     
 }
+
+/* for IOS hover issues */
+
+@media (hover: none) {
+    .project__description {
+        opacity: 1;
+        transform: translateY(-50%);
+        left: 24px;
+        right: 24px;
+        max-width: unset;
+    }
+
+    .project__wrapper--bg {
+        opacity: 0.7;
+    }
+
+    .project__img {
+        transform: none;
+        filter: none;
+    }
+}

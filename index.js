@@ -55,3 +55,17 @@ function toggleModal() {
     isModalOpen = true;
     document.body.classList += " modal__open"
 }
+
+const projectWrappers = document.querySelectorAll(".project__wrapper");
+
+projectWrappers.forEach(wrapper => {
+  wrapper.addEventListener("click", () => {
+
+    projectWrappers.forEach(card => {
+      card.classList.remove("mobile-active");
+    });
+
+    wrapper.classList.add("mobile-active");
+
+  });
+});

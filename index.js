@@ -58,14 +58,25 @@ function toggleModal() {
 
 const projectWrappers = document.querySelectorAll(".project__wrapper");
 
-projectWrappers.forEach(wrapper => {
-  wrapper.addEventListener("click", () => {
-
-    projectWrappers.forEach(card => {
-      card.classList.remove("mobile-active");
+projectWrappers.forEach((wrapper) => {
+  wrapper.addEventListener("touchstart", (event) => {
+    projectWrappers.forEach((card) => {
+      if (card !== wrapper) {
+        card.classList.remove("mobile-active");
+      }
     });
 
-    wrapper.classList.add("mobile-active");
+    wrapper.classList.toggle("mobile-active");
+    event.preventDefault();
+  });
 
+  wrapper.addEventListener("click", () => {
+    projectWrappers.forEach((card) => {
+      if (card !== wrapper) {
+        card.classList.remove("mobile-active");
+      }
+    });
+
+    wrapper.classList.toggle("mobile-active");
   });
 });

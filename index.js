@@ -56,27 +56,3 @@ function toggleModal() {
     document.body.classList += " modal__open"
 }
 
-const projectWrappers = document.querySelectorAll(".project__wrapper");
-
-projectWrappers.forEach((wrapper) => {
-  wrapper.addEventListener("touchstart", (event) => {
-    projectWrappers.forEach((card) => {
-      if (card !== wrapper) {
-        card.classList.remove("mobile-active");
-      }
-    });
-
-    wrapper.classList.toggle("mobile-active");
-    event.preventDefault();
-  });
-
-  wrapper.addEventListener("click", () => {
-    projectWrappers.forEach((card) => {
-      if (card !== wrapper) {
-        card.classList.remove("mobile-active");
-      }
-    });
-
-    wrapper.classList.toggle("mobile-active");
-  });
-});

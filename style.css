@@ -547,6 +547,8 @@ PROJECTS
     overflow: hidden;
 }
 
+
+
 .project__wrapper:hover .project__description {
     opacity: 1;
     transform:  translateY(-50%);
@@ -556,6 +558,10 @@ PROJECTS
     transform: scale(1.07);
     filter: blur(5px);
 
+}
+
+.project__wrapper:hover .project__wrapper--bg {
+    opacity: 0.7;
 }
 
 .project__description {
@@ -569,9 +575,7 @@ PROJECTS
     max-width: 550px;
 }
 
-.project__wrapper:hover .project__wrapper--bg {
-    opacity: 0.7;
-}
+
 
 .project__wrapper--bg {
     position: absolute;
@@ -751,7 +755,7 @@ SHAPES
 
 /* for IOS hover issues */
 
-/* @media (hover: none) {
+@media (hover: none) {
     .project__description {
         opacity: 1;
         transform: translateY(-50%);
@@ -768,20 +772,5 @@ SHAPES
         transform: none;
         filter: none;
     }
-} */
-
-/* IOS click instead of hover */
-
-.project__wrapper.mobile-active .project__description {
-    opacity: 1;
-    transform: translateY(-50%);
 }
 
-.project__wrapper.mobile-active .project__wrapper--bg {
-    opacity: 0.7;
-}
-
-.project__wrapper.mobile-active .project__img {
-    transform: scale(1.07);
-    filter: blur(5px);
-}
